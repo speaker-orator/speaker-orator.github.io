@@ -271,3 +271,45 @@ a.footer:hover {
   background: #f8eff5;
   color: #e57c5e;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+header a {
+  text-decoration: none
+}
+
+header li {
+  text-decoration: none;
+  color: #575e75;
+  padding: 7px 9px;
+  background: #ffc6c6;
+  filter: brightness(100%);
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+header li:hover {
+filter: brightness(95%);
+}
+
+.headerpage {
+  background: #ff9c9c;
+  border-radius: 10px;
+  max-height: 90px;
+  list-style-type: none;
+  display: flex;
+  color: #575e75;
+}
+
+header ul{
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  float: right;
+  width: 100%;
+}
+
+header {
+  padding: 15px;
+  align-items: center;
+  background: #fff;
+}
