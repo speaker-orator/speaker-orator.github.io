@@ -154,7 +154,7 @@ div.content_group.contributors-list > .button.contributor-type1:hover > img {
 
 a.linka {
     user-select: none;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 1px 3px;
   background: #ddd5ec;
   color: #754ec3;
