@@ -281,7 +281,7 @@ header li {
   text-decoration: none;
   color: #575e75;
   padding: 7px 9px;
-  background: #ffc6c6;
+  background: #c4c4ff;
   filter: brightness(100%);
   border-radius: 3px;
   transition: transform 0.3s ease;
@@ -292,7 +292,7 @@ filter: brightness(95%);
 }
 
 .headerpage {
-  background: #ff9c9c;
+  background: #8888e9;
   border-radius: 10px;
   max-height: 90px;
   list-style-type: none;
