@@ -313,3 +313,23 @@ header {
   align-items: center;
   background: #fff;
 }
+
+.part {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-height: 100px;
+    margin: 10px;
+transition: transform 0.3s ease;
+}
+
+.part:hover {
+transform: scale(0.95);
+filter: brightness(94%);
+transition: transform 0.3s ease;
+}
+
