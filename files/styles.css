@@ -333,3 +333,14 @@ filter: brightness(94%);
 transition: transform 0.3s ease;
 }
 
+.text-link {
+    padding: 10px 10px 0px 10px;
+    color: #8a8f9e;
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover {
+    padding: 10px 10px 0px 10px;
+    color: #575e75;
+    transition: transform 0.3s ease;
+}
