@@ -1,0 +1,582 @@
+<html><head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+        body {
+            font-family: "Noto Sans", sans-serif;
+            background-color: #f6f7fb;
+            margin: 0;
+            border: none;
+            overflow-x: hidden;
+        }
+
+        .headerpage {
+            background: #fff;
+            max-height: 90px;
+            list-style-type: none;
+            display: flex;
+            box-shadow: 0px 2px 10px 0px #575e7559;
+            margin-bottom: 20px;
+        }
+
+        header li {
+            text-decoration: none;
+            color: #575e75;
+            padding: 7px 9px;
+            background: #f4f7fa;
+            filter: brightness(100%);
+            border-radius: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        header a {
+            text-decoration: none
+        }
+
+        header li:hover {
+            filter: brightness(95%);
+        }
+
+        header li:active {
+            filter: brightness(90%);
+        }
+
+        header ul {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            float: right;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .startbuttoncont {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            align-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+            height: 100%;
+            border: none;
+            z-index: 999;
+            top: 0;
+        }
+
+        .startbutton {
+            transition: transform 0.3s ease;
+            box-shadow: 0px 0px 50px 0px rgb(218 200 241) inset;
+            background-color: rgb(124 53 194);
+            border-radius: 80px;
+            width: 250px;
+            font-family: Noto Sans, sans-serif;
+            color: white;
+            font-size: 1.1em;
+            height: 90px;
+            margin-left: calc(50% - 125px);
+            position: fixed;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            border: none;
+            z-index: 9999;
+            cursor: pointer;
+            user-select: auto;
+            -webkit-user-drag: auto;
+            -khtml-user-drag: auto;
+            -moz-user-drag: auto;
+            -o-user-drag: auto;
+            user-drag: auto;
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            pointer-events: auto;
+        }
+
+        .startbutton:hover {
+            border: none;
+            transform: scale(1.1);
+            box-shadow: 0px 0px 50px 0px rgb(247, 241, 255)inset;
+
+        }
+
+        .infodiv {
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 20px;
+            height: 90px;
+            margin: 10px;
+            padding: 20px;
+            align-content: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            gap: 20px;
+            border: 0px;
+            border-style: solid;
+        }
+
+        .background {
+            background-image: url("https://speaker-orator.github.io/files/img/dot.svg");
+            background-repeat: repeat;
+        }
+
+        .background2 {
+            background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2297.77718%22%20height%3D%2260.59123%22%20viewBox%3D%220%2C0%2C97.77718%2C60.59123%22%3E%3Cg%20transform%3D%22translate(-143.71902%2C-156.08428)%22%3E%3Cg%20data-paper-data%3D%22%7B%26quot%3BisPaintingLayer%26quot%3B%3Atrue%7D%22%20fill-rule%3D%22nonzero%22%20stroke%3D%22%23000000%22%20stroke-width%3D%220%22%20stroke-linecap%3D%22butt%22%20stroke-linejoin%3D%22miter%22%20stroke-miterlimit%3D%2210%22%20stroke-dasharray%3D%22%22%20stroke-dashoffset%3D%220%22%20style%3D%22mix-blend-mode%3A%20normal%22%3E%3Cpath%20d%3D%22M151.7655%2C216.67552v-60.59123h11.50895v60.59123z%22%20fill%3D%22%23ff7415%22%2F%3E%3Cpath%20d%3D%22M171.32095%2C216.67552v-41.63531h11.50895v41.63531z%22%20fill%3D%22%23ff9f5e%22%2F%3E%3Cpath%20d%3D%22M163.27445%2C216.67552v-25.38738h8.04649v25.38738z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M143.71902%2C216.67552v-25.38738h8.04648v25.38738z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M182.8299%2C216.67552v-25.38738h8.04648v25.38738z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M190.87638%2C216.67552v-50.77477h11.50895v50.77477z%22%20fill%3D%22%23ff924a%22%2F%3E%3Cpath%20d%3D%22M202.38533%2C216.67552v-25.38738h8.04649v25.38738z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M210.43182%2C216.67552v-45.0203h11.50895v45.0203z%22%20fill%3D%22%23e0e0e0%22%2F%3E%3Cpath%20d%3D%22M221.94077%2C216.67552v-25.38738h8.04648v25.38738z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M229.98725%2C216.67552v-55.51375h11.50895v55.51375z%22%20fill%3D%22%23ff924a%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+            background-repeat: repeat-x;
+            background-size: 40px;
+            background-position: bottom;
+            box-shadow: 0px 0px 5px 4px rgb(255 255 255) inset;
+         border-bottom: solid #ff944e 2px !important;}
+
+        footer {
+            margin-top: 170px
+        }
+
+        div.svipe {
+            @media (max-width: 768px) {
+                margin: 20px;
+                padding: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            @media (min-width: 769px) {
+                overflow: auto;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                overflow-x: auto;
+                gap: 25px;
+            }
+        }
+
+
+        @media (max-width: 599px) {
+            a.min600 {
+                display: none;
+            }
+        }
+
+
+        @media (max-width: 1050px) {
+            a.min1050 {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1050px) {
+            a.max1050 {
+                display: none;
+            }
+
+            div.max1050 {
+                display: none;
+            }
+        }
+
+        img {
+            -webkit-user-drag: none;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        p {
+            -webkit-user-drag: none;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .selectnone {
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
+        
+        .part2{
+    height: auto;
+    min-width: 500px;
+    max-width: 1000px;
+    width: 75%;
+    border: solid #0000001f 2px;
+        }
+        @media (max-width: 599px) {
+            .part2 {
+                min-width: auto;
+    border-top: none;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    width: 100%;
+    border-right: none;
+    border-bottom: none;
+            }
+        }
+.part1cont {
+display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+ @media (max-width: 900px) {
+.part1cont {flex-direction: column;}}
+
+.part1 {border: solid #0000001f 2px; height: auto;}
+
+.part1-1 {min-width: 500px; width:75%;}
+.part1-2 {min-width: 200px; width: 25%;}
+
+ @media (max-width: 900px) {
+.part1 {min-width:auto !important; width: 80% !important;}}
+
+.part3cont {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .part3cont {
+    flex-direction: column;
+    gap: 45px;
+  }
+}
+
+.part3-3 {    border: solid #0000001f 3px;
+    height: fit-content;
+    background: linear-gradient(90deg, #ffbf75, #ec9847);
+    padding: 15;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    position: relative;
+    top: 20px; }
+
+
+@media (max-width: 500px) {
+  .part3-3 {
+    top: -20px;
+  }
+}
+
+@media (max-width: 450px) {
+.min450 {display:none}
+}
+</style>
+</head>
+
+<body>
+    <div class="startbuttoncont selectnone"><a style="color: #fff; text-decoration: none; height: 250px; width: 100%; position: fixed; " href="https://stepik.org/course/296076/"><button class="startbutton">Начать учится</button></a></div>
+    <header>
+        <div class="headerpage" style="
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+">
+            <div class="background" style="
+    width: 100%;
+    box-shadow: 0px -10px 20px 10px rgb(255 255 255) inset;
+    background-size: 10px;
+    /* padding-left: 4%; */
+    /* padding-right: 4%; */
+">
+                <ul style="
+"><!-- <img src="https://speaker-orator.github.io/files/img/icon.svg" style="
+    height: 35px;
+    border-radius: 5px;
+" draggable="false"> <a href="https://speaker-orator.github.io/" style="max-height: 32.4px;" target="_blank"><b style="
+    font-family: 'Changa One', cursive;
+">
+                            <li style="
+">
+                                Искусство красноречия</li>
+                        </b></a> -->
+                     <a href="https://speaker-orator.github.io/" target="_blank">
+<img src="https://speaker-orator.github.io/files/img/speaker_orator.svg" draggable="false">
+
+                    </a><a class="min450" href="https://t.me/speaker_orator" target="_blank">
+                        <li>Телеграмм</li>
+                    </a><a class="min450" href="https://dzen.ru/speaker_orator" target="_blank">
+                        <li>Дзен</li>
+                    </a><a class="min450" href="https://boosty.to/speaker_orator" target="_blank">
+                        <li>Boosty</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div style="
+    margin-top: 100px;
+"></div>
+    <a class="min1050">
+        <div style="
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+">
+            <div style="
+    /* margin-right: 0px; */
+">
+                <p style="
+    font-size: 2em;font-weight: bold;
+">🎤 Техника речи</p>
+                <p>— Разберетесь в понятиях яркости голоса и дикции <br>
+                    — Вы разовьете выносливость и гибкость голоса. <br>
+                    — Комплексное развитие речевого дыхания<br>— Упражнения, которые из года в год будут <br>укреплять и
+                    развивают звучание<br><br> — Курс полезен всем, кто говорит публично,<br> чья деятельность связана с
+                    говорением,<br> всем тем, кто хочет воспитать уверенный голос.
+                </p>
+            </div> <video src="https://cdn.stepik.net/video/645013/360/99af653a99bc0d74465c73004e813d16.mp4" style="
+    border-radius: 20px;
+    max-height: 600px;
+    margin-left: 50px;
+    max-width: 500px;
+    z-index: 999999;
+" controls=""></video>
+        </div>
+    </a>
+
+    <div style="
+    margin-left: 3%;
+    margin-right: 3%;
+">
+        <div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+">
+            <div style="
+    max-width: 1100px;
+    margin-top: 5px;
+">
+                <div class="max1050 infodiv" style="border-bottom: 5px #2f31768c;border-style: solid;"><img src="https://cdn.stepik.net/media/cache/images/courses/296076/cover_Zv3Did0/a95ca3e04b026bb8a8408b636dfcf609.png" style="
+    border-radius: 18px;
+">
+                    <p style="
+    font-size: 1.5em;
+    font-weight: bold;
+">
+                        Техника речи<a class="min600"> + Дикция</a></p>
+                </div>
+                <div style="
+    display: flex;
+    justify-content: center;
+"><img src="https://speaker-orator.github.io/files/img/%D0%9F%D1%83%D1%82%D1%8C_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8_%D1%80%D0%B5%D1%87%D0%B8.svg" style="width: 100%;max-width: 700px;"></div>
+                <div class="part1cont">
+                    <div class="infodiv part1 background2 part1-1" style="
+">
+                        <p><img src="https://www.svgrepo.com/show/477032/book.svg" style="
+    max-width: 55px;
+    float: left;
+    margin-right: 10px;
+    transform: rotate(-10deg);
+">Учебные материалы систематизируют знания тех, кто владеет словом, а для тех, кто развивает мастерство
+                            словесного действия - станет фундаментом.
+                            <br><br>Комплекс, а также курсы составлены таким образом, что овладение важными навыками
+                            работы с
+                            голосом
+                            происходит комплексно и быстро. Последовательное выполнение упражнений представленных на
+                            курсе,
+                            позволят
+                            улучшить чёткость речи и улучшат характеристики вашего голоса.
+                            <br><br><img src="https://www.svgrepo.com/show/477003/bachelor-hat.svg" style="
+    max-height: 80px;
+    float: right;
+    margin-left: 10px;
+    transform: rotate(10deg);
+">На курсе вы получите совершенствование своей дикции, разбор характеристик голоса,
+                            развитие
+                            фонационного дыхания, раскрытие природных качеств голоса, узнаете о способах сделать свой
+                            голос
+                            ярче.
+                        </p>
+                    </div>
+                    <div class="infodiv part1 background2 part1-2" style="
+    /* flex-direction: column; */
+">
+                        <p>🎈Курсы комплекса содержат:
+                            <br><br>
+                            — Видео-уроки <br>
+                            — Видео-упражнения и видео-тренажеры <br>
+                            — Модуль по работе с зажимами и страхами <br>
+                            — Подробный разбор характеристик голоса
+                        </p>
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--- <div style="
+    display: flex;
+    justify-content: center;
+">
+        <p style="
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000a6;
+">Какие проблемы поможет решить</p>
+    </div> -->
+    <!--- <div class="svipe" style="
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: calc(100% - 6% - 40px);
+">
+        <div class="infodiv" style="
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    background: url(https://speaker-orator.github.io/files/img/dot.svg), linear-gradient(0deg, #6e82c7, #9ab1ff);
+    padding-bottom: 32px;
+    min-width: 350px;
+    background-repeat: repeat;
+    background-size: 9px;
+    box-shadow: 0px 0px 25px 11px rgb(94 86 155) inset;
+    margin: 0px;
+">
+            <div style="
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+">1</div>
+            <div>Хочется что-то держать в руках, во время<br>говорения, или переминаться с ноги на ногу?<br>Тут имеет
+                место <b>Зажим</b><br> - мышечное напряжение, часто их причиной<br>становится волнение. Такие ситуации мы <br> разбираем на курсе.</div>
+        </div>
+    </div> -->
+    <div style="
+    display: flex;
+    justify-content: center;
+">
+        <p style="
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000a6;
+">Как проходит обучение</p>
+    </div>
+    <div style="
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+">
+        <div class="infodiv part2" style="
+">
+            <p><img src="https://www.svgrepo.com/show/477032/book.svg" style="
+    max-width: 55px;
+    float: left;
+    margin-right: 10px;
+    transform: rotate(-10deg);
+">Обучение проходит на платформе Stepik, и разделено на 4 части <a style="
+    color: #00000091;
+">(4 курса)</a>, каждый из курсов имеет свою большую тему и разделен на несколько модулей <a style="
+    color: #00000091;
+">(т. е. мини-тем, Например, в курсе по технике речи это «Подготовка речевого голоса», «Чёткость звучания»)</a> В
+                модулях находятся сами уроки. Уроки сделаны в формате видеолекций с упражнениями и теорией. <br><br><img src="https://www.svgrepo.com/show/477003/bachelor-hat.svg" style="
+    max-height: 80px;
+    float: right;
+    margin-left: 10px;
+    transform: rotate(10deg);
+">После прохождения вы получите совершенствование своей дикции, разбор характеристик голоса, развитие
+                фонационного дыхания, раскрытие природных качеств голоса, узнаете о способах сделать свой голос
+                ярче.
+            </p>
+        </div>
+
+    </div>
+    <div style="
+    display: flex;
+    justify-content: center;
+">
+        <p style="
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000a6;
+">Кому это полезно?</p>
+    </div>
+    <div style="
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+">
+        <div class="part3cont" style="
+">
+            <div class="infodiv" style="
+    border: solid #0000001f 3px;
+    height: fit-content;
+    background: linear-gradient(90deg, #ffbf76, #ef9a48);
+    padding: 15;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    display: flex;
+    transform: rotate(
+352deg);
+    /* bottom: 5px; */
+    position: relative;
+    top: 25px;
+">Журналистам</div>
+            <div class="infodiv" style="
+    border: solid #0000001f 3px;
+    height: fit-content;
+    background: linear-gradient(90deg, #8ec2fb, #82a8ff);
+    padding: 15;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    transform: rotate(
+7deg);
+">Будущим актерам</div>
+            <div class="infodiv part3-3">Ведущим</div>
+        </div>
+
+        <div style="display: flex">
+            <div class="infodiv" style="
+    border: solid #0000001f 3px;
+    height: fit-content;
+    background: linear-gradient(90deg, #b6eba6, #32dd81);
+    padding: 15;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    /* max-width: 8; */
+    /* display: flex; */
+    transform: rotate(0.98turn);
+    scale: 1.1;
+">Тебе</div>
+        </div>
+    </div>
+    <footer></footer>
+
+
+
+
+
+
+</body></html>
